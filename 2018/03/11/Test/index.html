@@ -3,23 +3,23 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>article title | Jack&#39;s Blog</title>
+  <title>test mathjax | Jack&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="Someone&apos;s knocking at the door.">
+  <meta name="description" content="\begin{eqnarray*} \int \frac{t^2}{1+t^4} dt &amp;=&amp; \frac{1}{2} \int \frac{(t^2-1)+(t^2+1)}{1+t^4} dt \\ &amp;=&amp; \frac{1}{2} \int \frac{t^2-1}{1+t^4} dt + \frac{1}{2} \int \frac{t^2+1}{1+t^4} dt \\ &amp;=&amp; \frac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="article title">
-<meta property="og:url" content="http://yoursite.com/2018/03/11/article-title/index.html">
+<meta property="og:title" content="Test MathJax">
+<meta property="og:url" content="http://yoursite.com/2018/03/11/Test/index.html">
 <meta property="og:site_name" content="Jack&#39;s Blog">
-<meta property="og:description" content="Someone&apos;s knocking at the door.">
+<meta property="og:description" content="\begin{eqnarray*} \int \frac{t^2}{1+t^4} dt &amp;=&amp; \frac{1}{2} \int \frac{(t^2-1)+(t^2+1)}{1+t^4} dt \\ &amp;=&amp; \frac{1}{2} \int \frac{t^2-1}{1+t^4} dt + \frac{1}{2} \int \frac{t^2+1}{1+t^4} dt \\ &amp;=&amp; \frac">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-11T06:57:25.962Z">
+<meta property="og:updated_time" content="2018-03-11T14:20:31.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="article title">
-<meta name="twitter:description" content="Someone&apos;s knocking at the door.">
+<meta name="twitter:title" content="Test MathJax">
+<meta name="twitter:description" content="\begin{eqnarray*} \int \frac{t^2}{1+t^4} dt &amp;=&amp; \frac{1}{2} \int \frac{(t^2-1)+(t^2+1)}{1+t^4} dt \\ &amp;=&amp; \frac{1}{2} \int \frac{t^2-1}{1+t^4} dt + \frac{1}{2} \int \frac{t^2+1}{1+t^4} dt \\ &amp;=&amp; \frac">
   
     <link rel="alternate" href="/atom.xml" title="Jack&#39;s Blog" type="application/atom+xml">
   
@@ -159,7 +159,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-article-title" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Test" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -167,7 +167,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      article title
+      Test MathJax
     </h1>
   
 
@@ -175,8 +175,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/03/11/article-title/" class="article-date">
-	  <time datetime="2018-03-11T06:57:25.000Z" itemprop="datePublished">2018-03-11</time>
+	<a href="/2018/03/11/Test/" class="article-date">
+	  <time datetime="2018-03-11T14:15:35.000Z" itemprop="datePublished">2018-03-11</time>
 	</a>
 
       
@@ -190,7 +190,14 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <script type="math/tex; mode=display">
+\begin{eqnarray*}
+\int \frac{t^2}{1+t^4} dt &=& \frac{1}{2} \int \frac{(t^2-1)+(t^2+1)}{1+t^4} dt \\
+&=& \frac{1}{2} \int \frac{t^2-1}{1+t^4} dt + \frac{1}{2} \int \frac{t^2+1}{1+t^4} dt \\
+&=& \frac{1}{2} \int \frac{1-\frac{1}{t^2}}{\frac{1}{t^2}+t^2} dt + \frac{1}{2} \int \frac{1+\frac{1}{t^2}}{\frac{1}{t^2}+t^2} dt \\
+&=& \frac{1}{2} \int \frac{d(t+\frac{1}{t})}{(t+\frac{1}{t})^{2}-2} + \frac{1}{2} \int \frac{d(t-\frac{1}{t})}{(t-\frac{1}{t})^{2}+2} \\
+&=& \frac{1}{2} \left( \frac{1}{2\sqrt{2}}ln\left| \frac{(t+\frac{1}{t})-\sqrt{2}}{(t+\frac{1}{t})+\sqrt{2}} \right| \right) + \frac{1}{2} \left( \frac{1}{\sqrt{2}} arctan \frac{t-\frac{1}{t}}{\sqrt{2}} \right) + C
+\end{eqnarray*}</script>
       
     </div>
     <footer class="article-footer">
@@ -241,15 +248,11 @@ var a = new Donate({
     
 <nav id="article-nav">
   
-    <a href="/2018/03/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
 </nav>
 
