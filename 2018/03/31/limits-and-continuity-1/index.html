@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>极限与连续 - 1 | Jack&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Math" />
+  
+  
+  
+  
+  <meta name="description" content="最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。 利用极限的运算性质求极限方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。 例一（江苏省1998年竞赛题·改）\lim_{n \ri">
+<meta name="keywords" content="Math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="极限与连续 - 1">
+<meta property="og:url" content="http://yoursite.com/2018/03/31/limits-and-continuity-1/index.html">
+<meta property="og:site_name" content="Jack&#39;s Blog">
+<meta property="og:description" content="最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。 利用极限的运算性质求极限方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。 例一（江苏省1998年竞赛题·改）\lim_{n \ri">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-03-31T15:03:59.825Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="极限与连续 - 1">
+<meta name="twitter:description" content="最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。 利用极限的运算性质求极限方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。 例一（江苏省1998年竞赛题·改）\lim_{n \ri">
+  
+    <link rel="alternate" href="/atom.xml" title="Jack&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" ><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-limits-and-continuity-1" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      极限与连续 - 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/03/31/limits-and-continuity-1/" class="article-date">
+	  <time datetime="2018-03-31T11:13:33.000Z" itemprop="datePublished">2018-03-31</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		PV:<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。</p>
+<h2 id="利用极限的运算性质求极限"><a href="#利用极限的运算性质求极限" class="headerlink" title="利用极限的运算性质求极限"></a>利用极限的运算性质求极限</h2><p>方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。</p>
+<h3 id="例一（江苏省1998年竞赛题·改）"><a href="#例一（江苏省1998年竞赛题·改）" class="headerlink" title="例一（江苏省1998年竞赛题·改）"></a>例一（江苏省1998年竞赛题·改）</h3><script type="math/tex; mode=display">\lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1})</script><p>这是一道很经典的题目，这道题目其实可以直接看出答案，很明显的，$ n \rightarrow \infty $ 的时候， $ \sqrt{n^{2}+1} $ 中的 1 可以忽略，那么这一项就可以看成$ sin(n \pi) \rightarrow 0 $，当然答案是对的，但是这样的解法是不严谨的，标准解法如下：</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+  \lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1}) &=& \lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1} - n \pi + n \pi) \\
+  &=& \lim_{n \rightarrow \infty} (-1)^{n} sin(\pi \sqrt{n^{2}+1} - n \pi) \\
+  &=& \lim_{n \rightarrow \infty} (-1)^{n} sin(\frac{\pi}{\sqrt{n^{2}+1}+n}) \\
+  &=& 0
+\end{eqnarray*}</script><p><strong>注意，这里用到了一个结论： $ sin (x+n \pi) = (-1)^{n} sin x $</strong><br><a id="more"></a></p>
+<h3 id="例二（江苏省2012年竞赛题）"><a href="#例二（江苏省2012年竞赛题）" class="headerlink" title="例二（江苏省2012年竞赛题）"></a>例二（江苏省2012年竞赛题）</h3><script type="math/tex; mode=display">\lim_{n \rightarrow \infty} \frac{1}{n}|1-2+3-\cdots+(-1)^{n+1}n|</script><p>观察发现，题目里有一个$ (-1)^{n+1} $，所以想到要分奇偶讨论：</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+  令 \ x_{n} &=& \frac{1}{n}|1-2+3-\cdots+(-1)^{n+1}n| \\
+  则 \  x_{2n} &=& \frac{1}{2n}|(1+3+\cdots+2n-1)-(2+4+\cdots+2n)| \\
+  &=& \frac{1}{2n} |n^{2}-(n^{2}+n)| = \frac{1}{2} \\
+  x_{2n+1} &=& \frac{1}{2n+1}|(1+3+\cdots+2n+1)-(2+4+\cdots+2n)| \\
+  &=& \frac{|(n+1)^{2}-(n^{2}+n)|}{2n+1} = \frac{n+1}{2n+1} \\
+\end{eqnarray*}</script><script type="math/tex; mode=display">\because \lim_{n \rightarrow \infty} x_{2n} = \frac{1}{2} \quad \lim_{n \rightarrow \infty} x_{2n+1} = \frac{1}{2} \qquad \therefore \lim_{n \rightarrow \infty} x_{n} = \frac{1}{2}</script><p><strong>注意，这里用到了一个结论：对于数列 <script type="math/tex">\{ x_{n} \}</script>:</strong></p>
+<script type="math/tex; mode=display">\lim_{n \rightarrow \infty} x_{2n} = \lim_{n \rightarrow \infty} x_{2n+1} = A，则 \lim_{n \rightarrow \infty} x_{n} = A</script><p>也就是说，如果一个数列的奇数项子列与偶数项子列共同收敛于$ A $，那么这个数列也收敛于$ A $，证明如下：</p>
+<p>证： 因为 <script type="math/tex">x_{2k-1} \rightarrow A \ (k \rightarrow \infty)</script> ，所以<script type="math/tex">\forall \varepsilon > 0 ，\exists k_{1}</script> ，当 <script type="math/tex">k>k_{1}</script> 时，有 <script type="math/tex">|x_{2k-1} - A| < \varepsilon</script> ；<br>又因为<script type="math/tex">x_{2k} \rightarrow A \ (k \rightarrow \infty)</script>，所以对上述<script type="math/tex">\varepsilon > 0，\exists k_{2}</script>，当 <script type="math/tex">k>k_{2}</script> 时，有 <script type="math/tex">|x_{2k} - A| < \varepsilon</script> ；<br>记 <script type="math/tex">K = max \{ k_{1},k_{2} \}</script>，取 <script type="math/tex">N = 2K</script>，则当 <script type="math/tex">n > N</script> 时：<br>若 <script type="math/tex">n = 2k-1</script>，则</p>
+<script type="math/tex; mode=display">k > K + \frac{1}{2} > k_{1} \Rightarrow |x_{n} - A| = |x_{2k-1} - A| < \varepsilon</script><p>若 <script type="math/tex">n = 2k</script>，则</p>
+<script type="math/tex; mode=display">k > K \geq k_{2} \Rightarrow |x_{n} - A| = |x_{2k} - A| < \varepsilon</script><p>从而只要 <script type="math/tex">n > N</script>，就有 <script type="math/tex">|x_{n} - A| < \varepsilon</script>，即 <script type="math/tex">x_{n} \rightarrow A \ (n \rightarrow \infty)</script></p>
+<h3 id="例三（浙江省2002年竞赛题）"><a href="#例三（浙江省2002年竞赛题）" class="headerlink" title="例三（浙江省2002年竞赛题）"></a>例三（浙江省2002年竞赛题）</h3><script type="math/tex; mode=display">设 \ S_{n} = \sum_{k=1}^{n} arctan \frac{1}{2k^{2}}，求 \lim_{n \rightarrow \infty} S_{n}</script><p>这道题目其实要用到一个反正切函数的和角公式，要是想不到的话还是不怎么好下手的</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+  arctan \frac{1}{2} + arctan \frac{1}{2 \cdot 2^{2}} &=& arctan \frac{\frac{1}{2}+\frac{1}{8}}{1-\frac{1}{2} \cdot \frac{1}{8}} = \frac{2}{3} \\
+  arctan \frac{2}{3} + arctan \frac{1}{2 \cdot 3^{2}} &=& arctan \frac{\frac{2}{3}+\frac{1}{18}}{1-\frac{2}{3} \cdot \frac{1}{18}} = \frac{3}{4} \\
+  &\cdot& \\
+  &\cdot& \\
+  &\cdot& \\
+  arctan \frac{n-1}{n} + arctan \frac{1}{2 \cdot n^{2}} &=& arctan \frac{\frac{n-1}{n}+\frac{1}{2n^{2}}}{1-\frac{n-1}{n} \cdot \frac{1}{2n^{2}}} = \frac{n(2n^{2}-2n+1)}{2n^{3}-n+1} \\
+  &=& arctan \frac{n}{n+1} 
+\end{eqnarray*}</script><script type="math/tex; mode=display">所以 \ S_{n} = arctan \frac{n}{n+1}，则 \lim_{n \rightarrow \infty} S_{n} = \lim_{n \rightarrow \infty} arctan \frac{n}{n+1} = \frac{\pi}{4}</script><p><strong>注意，这里用到了刚刚提到的一个公式：</strong></p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+arctan A + arctan B &=& arctan \frac{A+B}{1-AB}，AB < 1 \\
+arctan A - arctan B &=& arctan \frac{A-B}{1+AB}，AB > -1 
+\end{eqnarray*}</script><p>更详细的反三角的内容可以参考<a href="https://baike.baidu.com/item/%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/7004029?fr=aladdin" target="_blank" rel="noopener">百度</a>或者<a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions" target="_blank" rel="noopener">维基</a>，这里就不多做说明了</p>
+<h2 id="利用等价无穷小替换、重要极限求极限"><a href="#利用等价无穷小替换、重要极限求极限" class="headerlink" title="利用等价无穷小替换、重要极限求极限"></a>利用等价无穷小替换、重要极限求极限</h2><p>常用的等价无穷小关系 <script type="math/tex">( x \rightarrow 0 )</script>：</p>
+<script type="math/tex; mode=display">
+x \sim sin x \sim tan x \sim arcsin x \sim arctan x \sim ln(1+x) \sim e^{x} - 1 \sim \sqrt{1+x} - \sqrt{1-x} \\
+1 - cos x \sim \frac{1}{2} x ^{2} \qquad a^{x} - 1 \sim xlna (a > 0, \neq 1) \qquad log_{a} (1+x) \sim \frac{x}{lna} (a > 0, \neq 1) \\
+(1+ax)^{b} - 1 \sim abx \qquad \sqrt[b]{1+ax} - 1 \sim \frac{a}{b} x</script><p>重要极限：</p>
+<script type="math/tex; mode=display">
+\lim_{\triangle \rightarrow 0} \frac{sin \triangle}{\triangle} = 1 \qquad \qquad \lim_{\triangle \rightarrow 0}(1+\triangle)^{\frac{1}{\triangle}} = e \quad ( \lim_{\triangle \rightarrow \infty}(1+\frac{1}{\triangle})^{\triangle} = e )</script><p><span id="jump"></span><br><strong>另外，还有一个很常用很重要的极限：<script type="math/tex">当u(x) \rightarrow 1，v(x) \rightarrow \infty （同一趋势下）时，（即 1^{\infty} 型）</script></strong></p>
+<script type="math/tex; mode=display">\large{ \lim u(x)^{v(x)} = \lim \left\{ [1+u(x)-1]^{\frac{1}{u(x)-1} } \right\}^{v(x)[u(x)-1]} = e^{\lim v(x)[u(x)-1]} }</script><h3 id="例一（莫斯科财政金融学院1977年竞赛题）"><a href="#例一（莫斯科财政金融学院1977年竞赛题）" class="headerlink" title="例一（莫斯科财政金融学院1977年竞赛题）"></a>例一（莫斯科财政金融学院1977年竞赛题）</h3><script type="math/tex; mode=display">\lim_{n \rightarrow \infty}(cos\frac{x}{2}cos\frac{x}{4} \cdots cos\frac{x}{2^{n}})</script><p>观察发现每一项呈<script type="math/tex">\ \large{ \frac{1}{2} \ }</script>递减，联想倍角公式，就很容易求出结果了</p>
+<script type="math/tex; mode=display">
+令 \ x_{n} = cos\frac{x}{2}cos\frac{x}{4} \cdots cos\frac{x}{2^{n}} ，则 \ x_{n} \cdot sin\frac{x}{2^{n}} = \frac{1}{2^{n}}sinx ，所以 \\
+\lim_{n \rightarrow \infty} x_{n} = \lim_{n \rightarrow \infty} \frac{\frac{sinx}{2^{n}}}{sin\frac{x}{2^{n}}} = \lim_{n \rightarrow \infty} \frac{sinx}{x} \cdot \frac{\frac{x}{2^{n}}}{sin\frac{x}{2^{n}}} = \frac{sinx}{x}</script><p><strong>注意，这里一定要看清楚是对$\ n \ $求极限，而不是$\ x \ $ ！</strong></p>
+<h3 id="例二（江苏省1998年竞赛题）"><a href="#例二（江苏省1998年竞赛题）" class="headerlink" title="例二（江苏省1998年竞赛题）"></a>例二（江苏省1998年竞赛题）</h3><script type="math/tex; mode=display">\lim_{x \rightarrow 0} \frac{\sqrt{1+x}+\sqrt{1-x}-2}{\sqrt{1+x^{2}}-1}</script><p>要解决这道题目，就要熟练掌握等价无穷小的替换</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+  \lim_{x \rightarrow 0} \frac{\sqrt{1+x}+\sqrt{1-x}-2}{\sqrt{1+x^{2}}-1} &=&  \lim_{x \rightarrow 0} \frac{(\sqrt{1+x}+\sqrt{1-x})^{2}-2^{2}}{\frac{1}{2}x^{2}(\sqrt{1+x}+\sqrt{1-x}+2)} \\
+  &=& \lim_{x \rightarrow 0} \frac{2\sqrt{1-x^{2}}-1}{2x^{2}} \\
+  &=& \lim_{x \rightarrow 0} \frac{-\frac{1}{2}x^{2}}{x^{2}} = - \frac{1}{2}
+\end{eqnarray*}</script><p>现对上述过程加以说明，首先分子分母同乘<script type="math/tex">\sqrt{1+x}+\sqrt{1-x}+2</script>，同时做等价替换<script type="math/tex">\sqrt{1+x^{2}}-1 \sim \frac{1}{2}x^{2}</script>，接下来对分母中<script type="math/tex">\sqrt{1+x}+\sqrt{1-x}+2</script>进行等价替换，$ -1-1 $ 然后再 $ +2 $，就有：</p>
+<script type="math/tex; mode=display">\sqrt{1+x}-1+\sqrt{1-x}-1+4 \sim \frac{1}{2}x - \frac{1}{2}x +4 = 4</script><h3 id="例三（北京市1996年竞赛题）"><a href="#例三（北京市1996年竞赛题）" class="headerlink" title="例三（北京市1996年竞赛题）"></a>例三（北京市1996年竞赛题）</h3><script type="math/tex; mode=display">已知\lim_{x \rightarrow 0} \frac{ln \left[ 1+\frac{f(x)}{sin2x} \right]}{3^{x}-1} = 5，求 \lim_{x \rightarrow 0} \frac{f(x)}{x^{2}}</script><p>注意到在<script type="math/tex">x \rightarrow 0</script>时，分母趋于零，那么就有分子趋于零</p>
+<script type="math/tex; mode=display">
+由于 x \rightarrow 0 时，ln \left[ 1+\frac{f(x)}{sin2x} \right] \rightarrow 0，所以 \frac{f(x)}{sin2x} \rightarrow 0，且 \\
+ln \left[ 1+\frac{f(x)}{sin2x} \right] \sim \frac{f(x)}{sin2x} \sim \frac{f(x)}{2x}，3^{x}-1 \sim xln3 \\
+所以 \lim_{x \rightarrow 0} \frac{ln \left[ 1+\frac{f(x)}{sin2x} \right]}{3^{x}-1} = \lim_{x \rightarrow 0} \frac{\frac{f(x)}{2x}}{xln3} = \lim_{x \rightarrow 0} \frac{f(x)}{x^{2}} \cdot \frac{1}{2ln3} = 5 \\
+故 \lim_{x \rightarrow 0} \frac{f(x)}{x^{2}} = 10ln3</script><p><strong>这里用到了一个结论：若极限存在，如果在某个自变量变化过程中分母趋于零，那么分子也趋于零，略证如下：</strong></p>
+<script type="math/tex; mode=display">
+已知\lim \frac{f(x)}{g(x)} = A，\lim g(x) = 0，则 \\
+\lim f(x) = \lim g(x) \cdot \frac{f(x)}{g(x)} = \lim g(x) \cdot \lim \frac{f(x)}{g(x)} = 0</script><h2 id="利用洛必达法则（L’Hospital’s-rule）求极限"><a href="#利用洛必达法则（L’Hospital’s-rule）求极限" class="headerlink" title="利用洛必达法则（L’Hospital’s rule）求极限"></a>利用洛必达法则（L’Hospital’s rule）求极限</h2><p>方法：先化简（初等变形、等价无穷小替换、非零因子极限先提出、变量替换），再使用洛必达法则</p>
+<h3 id="例一（全国大学生2010年预赛题）"><a href="#例一（全国大学生2010年预赛题）" class="headerlink" title="例一（全国大学生2010年预赛题）"></a>例一（全国大学生2010年预赛题）</h3><script type="math/tex; mode=display">\lim_{x \rightarrow \infty} e^{-x} (1+\frac{1}{x})^{x^{2}}</script><p><strong>注：本题有一个错误解法是</strong></p>
+<script type="math/tex; mode=display">
+原式 = \lim_{x \rightarrow \infty} e^{-x} \cdot \left[ \lim_{x \rightarrow \infty} (1+\frac{1}{x})^{x} \right] = \lim_{x \rightarrow \infty} e^{-x} \cdot e^{x} = 1</script><p>正确解法如下：</p>
+<script type="math/tex; mode=display">
+\large{
+\begin{eqnarray*}
+\lim_{x \rightarrow \infty} e^{-x} (1+\frac{1}{x})^{x^{2}} &=& \lim_{x \rightarrow \infty} e^{-x} \cdot e^{x^{2}ln(1+\frac{1}{x})} \\
+&=& e^{ \lim \limits_{x \rightarrow \infty} x^{2}ln(1+\frac{1}{x})-x} \\
+&\overset{t=\frac{1}{x}}{=}& e^{ \lim \limits_{t \rightarrow 0} \frac{ln(1+t)-t}{t^{2}}} \\
+&\overset{\frac{0}{0}}{=}& e^{ \lim \limits_{t \rightarrow 0} \frac{\frac{1}{1+t}-1}{2t}} \\
+&=& e^{ \lim \limits_{t \rightarrow 0} \frac{-t}{2t(1+t)}} \\
+&=& e^{-\frac{1}{2}}
+\end{eqnarray*}
+}</script><h3 id="例二（全国大学生2010年预赛题·改）"><a href="#例二（全国大学生2010年预赛题·改）" class="headerlink" title="例二（全国大学生2010年预赛题·改）"></a>例二（全国大学生2010年预赛题·改）</h3><script type="math/tex; mode=display">\lim_{x \rightarrow \infty} (x \cdot arctan \frac{1}{x})^{x^{2}}</script><p>注意这是<script type="math/tex">\ 1^{\infty} \</script>型，可以用本文<a href="#jump">之前</a>提到的一个结论先进行化简</p>
+<script type="math/tex; mode=display">
+\large{
+\begin{eqnarray*}
+\lim_{x \rightarrow \infty} (x \cdot arctan \frac{1}{x})^{x^{2}} &\overset{1^{\infty}}{=}& e^{\lim \limits_{x \rightarrow \infty} x^{2}(x \cdot arctan \frac{1}{x} -1)} \\
+&\overset{t=\frac{1}{x}}{=}& e^{\lim \limits_{t \rightarrow 0} \frac{arctant - t}{t^{3}}} \\
+&\overset{\frac{0}{0}}{=}& e^{\lim \limits_{t \rightarrow 0} \frac{\frac{1}{1+t^{2}}-1}{3t^{2}}} \\
+&=& e^{\lim \limits_{t \rightarrow 0} \frac{-t^{2}}{3t^{2}(1+t^{2})}} \\
+&=& e^{-\frac{1}{3}}
+\end{eqnarray*}
+}</script><h3 id="例三（南京大学1995年竞赛题）"><a href="#例三（南京大学1995年竞赛题）" class="headerlink" title="例三（南京大学1995年竞赛题）"></a>例三（南京大学1995年竞赛题）</h3><script type="math/tex; mode=display">\lim_{x \rightarrow 0} \frac{2ln(2-cosx)-3[(1+sin^{2}x)^{\frac{1}{3}}-1]}{[xln(1+x)]^{2}}</script><p>这道题目的综合性很强，不仅仅考到了洛必达法则（L’Hospital’s rule），还有等价无穷小的替换以及恒等变形，要是某几步没做好硬来的话，有可能最后求不出来结果</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+\lim_{x \rightarrow 0} \frac{2ln(2-cosx)-3[(1+sin^{2}x)^{\frac{1}{3}}-1]}{[xln(1+x)]^{2}} &=& \lim_{x \rightarrow 0} \frac{2ln(2-cosx)-3[(1+sin^{2}x)^{\frac{1}{3}}-1]}{x^{4}} \\
+&=& \lim_{x \rightarrow 0} \frac{\frac{2sinx}{2-cosx}-2(1+sin^{2}x)^{-\frac{2}{3}}sinx \cdot cosx}{4x^{3}} \\
+&=& \lim_{x \rightarrow 0} \frac{(1+sin^{2}x)^{\frac{2}{3}}-(2-cosx)cosx}{(2-cosx)2x^{2}(1+sin^{2}x)^{\frac{2}{3}}} \\
+&=& \lim_{x \rightarrow 0} \frac{(1+sin^{2}x)^{\frac{2}{3}}-(2-cosx)cosx}{2x^{2}} \\
+&=& \lim_{x \rightarrow 0} \frac{\frac{2}{3}(1+sin^{2}x)^{-\frac{1}{3}}sin2x+2sinx-sin2x}{4x} \\
+&=& \lim_{x \rightarrow 0} \frac{2}{3}(1+sin^{2})^{-\frac{1}{3}} \frac{sin2x}{4x} + \lim_{x \rightarrow 0}\frac{2sinx}{4x} - \lim_{x \rightarrow 0} \frac{sin2x}{4x} \\
+&=& \frac{2}{3} \cdot \frac{1}{2} + \frac{1}{2} - \frac{1}{2} \\
+&=& \frac{1}{3}
+\end{eqnarray*}</script><p>现在这道题目的解法略做说明，拿到题目的第一件事不是使用洛必达法则（L’Hospital’s rule），而是先看看是否能进行等价无穷小的替换或者恒等变形，在这里则要先进行等价无穷小的替换，即<script type="math/tex">\ ln(1+x) \sim x \</script>，然后再使用洛必达法则（L’Hospital’s rule）并进行化简，同时要注意到<script type="math/tex">\ 2-cox \rightarrow 1 \</script>与<script type="math/tex">\ 1+sin^{2}x \rightarrow 1 \</script>，再次使用洛必达法则（L’Hospital’s rule）分开化简就可以求得答案</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://s1.ax1x.com/2018/03/13/9hMzTO.png',
+  alipayImage: 'https://s1.ax1x.com/2018/03/13/9hQpkD.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5NC8xMTMzMQ">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/11/Test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Test MathJax</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用极限的运算性质求极限"><span class="nav-number">1.</span> <span class="nav-text">利用极限的运算性质求极限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例一（江苏省1998年竞赛题·改）"><span class="nav-number">1.1.</span> <span class="nav-text">例一（江苏省1998年竞赛题·改）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例二（江苏省2012年竞赛题）"><span class="nav-number">1.2.</span> <span class="nav-text">例二（江苏省2012年竞赛题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例三（浙江省2002年竞赛题）"><span class="nav-number">1.3.</span> <span class="nav-text">例三（浙江省2002年竞赛题）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用等价无穷小替换、重要极限求极限"><span class="nav-number">2.</span> <span class="nav-text">利用等价无穷小替换、重要极限求极限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例一（莫斯科财政金融学院1977年竞赛题）"><span class="nav-number">2.1.</span> <span class="nav-text">例一（莫斯科财政金融学院1977年竞赛题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例二（江苏省1998年竞赛题）"><span class="nav-number">2.2.</span> <span class="nav-text">例二（江苏省1998年竞赛题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例三（北京市1996年竞赛题）"><span class="nav-number">2.3.</span> <span class="nav-text">例三（北京市1996年竞赛题）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用洛必达法则（L’Hospital’s-rule）求极限"><span class="nav-number">3.</span> <span class="nav-text">利用洛必达法则（L’Hospital’s rule）求极限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例一（全国大学生2010年预赛题）"><span class="nav-number">3.1.</span> <span class="nav-text">例一（全国大学生2010年预赛题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例二（全国大学生2010年预赛题·改）"><span class="nav-number">3.2.</span> <span class="nav-text">例二（全国大学生2010年预赛题·改）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例三（南京大学1995年竞赛题）"><span class="nav-number">3.3.</span> <span class="nav-text">例三（南京大学1995年竞赛题）</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 Jack&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				UV : <span id="busuanzi_value_site_uv"></span> |  
+				PV : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">-->
+<!--</script>-->
+
+<!--<script type="text/javascript" src="http://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML">-->
+<!--</script>-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Settings</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              Text Font Size
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            You have changed the text font size.
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              Night Mode
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Night mode is enabled. Click again to disable.
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Jack&#39;s Blog
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 Jack All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

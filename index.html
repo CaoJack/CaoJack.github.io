@@ -260,6 +260,65 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-limits-and-continuity-1"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/03/31/limits-and-continuity-1/">极限与连续 - 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/03/31/limits-and-continuity-1/" class="article-date">
+	  <time datetime="2018-03-31T11:13:33.000Z" itemprop="datePublished">2018-03-31</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。</p>
+<h2 id="利用极限的运算性质求极限"><a href="#利用极限的运算性质求极限" class="headerlink" title="利用极限的运算性质求极限"></a>利用极限的运算性质求极限</h2><p>方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。</p>
+<h3 id="例一（江苏省1998年竞赛题·改）"><a href="#例一（江苏省1998年竞赛题·改）" class="headerlink" title="例一（江苏省1998年竞赛题·改）"></a>例一（江苏省1998年竞赛题·改）</h3><script type="math/tex; mode=display">\lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1})</script><p>这是一道很经典的题目，这道题目其实可以直接看出答案，很明显的，$ n \rightarrow \infty $ 的时候， $ \sqrt{n^{2}+1} $ 中的 1 可以忽略，那么这一项就可以看成$ sin(n \pi) \rightarrow 0 $，当然答案是对的，但是这样的解法是不严谨的，标准解法如下：</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+  \lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1}) &=& \lim_{n \rightarrow \infty} sin(\pi \sqrt{n^{2}+1} - n \pi + n \pi) \\
+  &=& \lim_{n \rightarrow \infty} (-1)^{n} sin(\pi \sqrt{n^{2}+1} - n \pi) \\
+  &=& \lim_{n \rightarrow \infty} (-1)^{n} sin(\frac{\pi}{\sqrt{n^{2}+1}+n}) \\
+  &=& 0
+\end{eqnarray*}</script><p><strong>注意，这里用到了一个结论： $ sin (x+n \pi) = (-1)^{n} sin x $</strong><br>
+        <!-- 最近一直在折腾数学竞赛，发现了一些比较经典的题目和解法，于是就萌生了写一系列数竞博文的想法，这一篇是这一系列博文的第一篇，是关于极限与连续的专题。
+利用极限的运算性质求极限方法：将所求函数或数列通过一些初等变形，如数列求和、函数因式分解、根式有理化、三角公式变化等等，再利用极限的四则运算法则、复合函数极限运算法则、无穷小的运算法则等求极限。
+例一（江苏省1998年竞赛题·改）\lim_{n ......  -->
+        <p class="article-more-link">
+          <a href="/2018/03/31/limits-and-continuity-1/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Test"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
