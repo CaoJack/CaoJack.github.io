@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>分光技术 | Jack&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Spectral Imaging" />
+  
+  
+  
+  
+  <meta name="description" content="简述利用色散、衍射等现象可以将波长范围很宽的复合光分散开来，成为许多波长范围狭小的“单色光”，这种作用称为“分光”。 类型棱镜分光棱镜，一种由两两相交但彼此均不平行的平面围成的透明物体，用以分光或使光束发生色散。棱镜是透明材料（如玻璃、水晶等）做成的多面体。  在光谱仪器中把复合光分解为光谱的棱镜称为“色散棱镜”，其中较常用的有三棱镜（Triangular prism）、贝林-布洛卡棱镜（Pell">
+<meta name="keywords" content="Spectral Imaging">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分光技术">
+<meta property="og:url" content="http://yoursite.com/2018/10/13/spectroscopic-technique/index.html">
+<meta property="og:site_name" content="Jack&#39;s Blog">
+<meta property="og:description" content="简述利用色散、衍射等现象可以将波长范围很宽的复合光分散开来，成为许多波长范围狭小的“单色光”，这种作用称为“分光”。 类型棱镜分光棱镜，一种由两两相交但彼此均不平行的平面围成的透明物体，用以分光或使光束发生色散。棱镜是透明材料（如玻璃、水晶等）做成的多面体。  在光谱仪器中把复合光分解为光谱的棱镜称为“色散棱镜”，其中较常用的有三棱镜（Triangular prism）、贝林-布洛卡棱镜（Pell">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNWmNQ.gif">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNfJMt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNfRdU.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNfWoF.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNhNlR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iNhRXt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iN4zrt.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iN5mq0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/13/iN5UZ6.png">
+<meta property="og:updated_time" content="2018-10-13T09:36:00.089Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分光技术">
+<meta name="twitter:description" content="简述利用色散、衍射等现象可以将波长范围很宽的复合光分散开来，成为许多波长范围狭小的“单色光”，这种作用称为“分光”。 类型棱镜分光棱镜，一种由两两相交但彼此均不平行的平面围成的透明物体，用以分光或使光束发生色散。棱镜是透明材料（如玻璃、水晶等）做成的多面体。  在光谱仪器中把复合光分解为光谱的棱镜称为“色散棱镜”，其中较常用的有三棱镜（Triangular prism）、贝林-布洛卡棱镜（Pell">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/10/13/iNWmNQ.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="Jack&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" ><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-spectroscopic-technique" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      分光技术
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/10/13/spectroscopic-technique/" class="article-date">
+	  <time datetime="2018-10-13T06:37:31.000Z" itemprop="datePublished">2018-10-13</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Spectral-Imaging/">Spectral Imaging</a>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		PV:<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>利用色散、衍射等现象可以将波长范围很宽的复合光分散开来，成为许多波长范围狭小的“单色光”，这种作用称为“分光”。</p>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="棱镜分光"><a href="#棱镜分光" class="headerlink" title="棱镜分光"></a>棱镜分光</h3><p>棱镜，一种由两两相交但彼此均不平行的平面围成的透明物体，用以分光或使光束发生色散。棱镜是透明材料（如玻璃、水晶等）做成的多面体。</p>
+<p><img src="https://s1.ax1x.com/2018/10/13/iNWmNQ.gif" width="320" height="240" alt="Dispersive Prism" align="center"></p>
+<p>在光谱仪器中把复合光分解为光谱的棱镜称为“色散棱镜”，其中较常用的有三棱镜（Triangular prism）、贝林-布洛卡棱镜（Pellin-Broca prism）、阿贝棱镜（Abbe prism）、阿米西棱镜（Amici prism）等。</p>
+<h4 id="三棱镜"><a href="#三棱镜" class="headerlink" title="三棱镜"></a>三棱镜</h4><p>三棱镜是最常用的色散棱镜，光线在射入棱镜和射出棱镜时两次折射。</p>
+<h4 id="贝林-布洛卡棱镜"><a href="#贝林-布洛卡棱镜" class="headerlink" title="贝林-布洛卡棱镜"></a>贝林-布洛卡棱镜</h4><p>贝林-布洛卡棱镜（Pellin–Broca prism）是以发明者，法国的仪器制 造者贝林博士（Ph. Pellin）和物理光学教授布洛林（André Broca）的名字命名的。</p>
+<p><img src="https://s1.ax1x.com/2018/10/13/iNfJMt.png" width="325" height="328" alt="Pellin–Broca Prism Concept Map" align="center"></p>
+<p>棱镜被塑造成有4个平面的方块，各边正确的角度依序为90°、75°、135°、和60°。光线由AB面入射，从BC面全反射，然后从AD面离开棱镜。对特定波长的光，进入之后经过折射在射出时，可以正确的偏转90°。以BC平面三分之一处的O点为轴心旋转，就可以选择偏转90°的波长，而不需要改变入射光、出射光与棱镜之间的几何关系（相对位置）。</p>
+<p><img src="https://s1.ax1x.com/2018/10/13/iNfRdU.jpg" width="370" height="227.5" alt="Pellin–Broca Prism Function Description Picture" align="center"><br><img src="https://s1.ax1x.com/2018/10/13/iNfWoF.jpg" width="370" height="250" alt="Pellin–Broca Prism Equivalent Optical System Picture" align="center"></p>
+<h4 id="阿贝棱镜"><a href="#阿贝棱镜" class="headerlink" title="阿贝棱镜"></a>阿贝棱镜</h4><p>阿贝棱镜（Abbe prism）是以发明者德国物理学家恩斯特 ·阿贝（Ernst Abbe）命名的光学元件，是与贝林-布洛卡棱镜相似的类型，有固定偏向角度的色散棱镜。</p>
+<p><img src="https://s1.ax1x.com/2018/10/13/iNhNlR.png" width="358.4" height="358.4" alt="Abbe Prism Concept Map" align="center"></p>
+<p>这种棱镜是三个角分别为30°-60°-90°的直角玻璃镜块，在使用时，光束由AB面进入，经折射后从BC面全反射向AC面， 在AC面折射后射出。这种棱镜被设计成特定波长的光在离开棱镜时会偏转60°（相对于原来的方向）。这是棱镜的最小偏向角，其他波长的光线会偏离更大的角度，以边AB上的任何一个点O为轴心旋转棱镜，就可以选择何种波长将被偏离60°。</p>
+<h4 id="阿米西棱镜"><a href="#阿米西棱镜" class="headerlink" title="阿米西棱镜"></a>阿米西棱镜</h4><p>阿米西棱镜（Amici prism）是以发明者意大利天文学家乔凡尼·阿米西（Giovanni Amici）命名的，是有色散功能的光学棱镜组，常用于分光仪中。</p>
+<p><img src="https://s1.ax1x.com/2018/10/13/iNhRXt.png" width="275" height="300" alt="Amici prism Concept Map" align="center"></p>
+<p>阿米西棱镜由两个三棱柱组成，第一个三棱柱通常由色散能力为中等的冕牌玻璃制成，第二个则以高色散的火石玻璃制造。光线进入第一个棱镜时先被折射，然后进入两个棱镜之间的接口，再以几乎垂直于第二个棱镜表面的方向射出。棱镜的角度和材质经过选择，使得其中一个波长（颜色）的光，通常是中心的波长，离开棱镜时与入射的光束是平行的。其他波长偏转的角度则与材料的色散能力有关。观察一个通过棱镜的光源就能显示出光源的光学光谱。</p>
+<p>经常，阿米西棱镜会紧接着另一个复制但反置的阿米西棱镜。这种三个棱镜的组合，通常被做为双阿米西棱镜，能增加色散的角度与作用，并且能将有用的成分，中心的波长，折射回入射的路径上。这样组合的棱镜的因而称为直视棱镜，常常做为手持的光谱仪。</p>
+<h3 id="光栅分光"><a href="#光栅分光" class="headerlink" title="光栅分光"></a>光栅分光</h3><p>由大量等宽等间距的平行狭缝构成的光学器件称为光栅（Grating）。一般常用的光栅是在玻璃片上刻出大量平行刻痕制成，刻痕为不透光部分，两刻痕之间的光滑部分可以透光，相当于一狭缝。</p>
+<h4 id="透射光栅"><a href="#透射光栅" class="headerlink" title="透射光栅"></a>透射光栅</h4><p><img src="https://s1.ax1x.com/2018/10/13/iN4zrt.jpg" width="300" height="261" alt="Transmission Grating" align="center"></p>
+<p>透射光栅是通过在一块很平的玻璃上刻出一系列相互平行、等宽度、等间距的刻痕做成的，刻痕处相当于毛玻璃，大部分光将不会透过，而两条刻痕之间则相当于一条狭缝，可以透光。</p>
+<h4 id="反射光栅"><a href="#反射光栅" class="headerlink" title="反射光栅"></a>反射光栅</h4><p><img src="https://s1.ax1x.com/2018/10/13/iN5mq0.png" width="479" height="258" alt="Reflection Grating" align="center"></p>
+<p>在高反射率的金属上镀上一层金属膜，并在镜面金属膜上刻划一系列平行等宽、等距的刻线，这种使白光反射，又能使光色散的光栅，称为反射光栅。</p>
+<h4 id="闪耀光栅"><a href="#闪耀光栅" class="headerlink" title="闪耀光栅"></a>闪耀光栅</h4><p><img src="https://s1.ax1x.com/2018/10/13/iN5UZ6.png" width="449" height="338" alt="Blazed Grating" align="center"></p>
+<p>平面光栅的不足：中央零级光强最大，高级次处衍射效率低，不满足光谱分析需要。<br>闪耀光栅的功能：改变刻痕面的形状，由一组锯齿状刻槽构成的反射式光栅，使单个刻痕面衍射的中央极大与槽面间干涉零级主极大分开，以改变各级主极大的相对强度，使某级光谱得到闪耀。<br>当光栅刻划成锯齿形的线槽断面时，光栅的光能量便集中在预定的方向上，即某一光谱级上。从这个方向探测时，光谱的强度最大，这种现象称为闪耀，这种光栅称为闪耀光栅。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://s1.ax1x.com/2018/03/13/9hMzTO.png',
+  alipayImage: 'https://s1.ax1x.com/2018/03/13/9hQpkD.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5NC8xMTMzMQ">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spectral-Imaging/">Spectral Imaging</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/31/limits-and-continuity-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">极限与连续 - 1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型"><span class="nav-number">2.</span> <span class="nav-text">类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#棱镜分光"><span class="nav-number">2.1.</span> <span class="nav-text">棱镜分光</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三棱镜"><span class="nav-number">2.1.1.</span> <span class="nav-text">三棱镜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贝林-布洛卡棱镜"><span class="nav-number">2.1.2.</span> <span class="nav-text">贝林-布洛卡棱镜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阿贝棱镜"><span class="nav-number">2.1.3.</span> <span class="nav-text">阿贝棱镜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阿米西棱镜"><span class="nav-number">2.1.4.</span> <span class="nav-text">阿米西棱镜</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光栅分光"><span class="nav-number">2.2.</span> <span class="nav-text">光栅分光</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#透射光栅"><span class="nav-number">2.2.1.</span> <span class="nav-text">透射光栅</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反射光栅"><span class="nav-number">2.2.2.</span> <span class="nav-text">反射光栅</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闪耀光栅"><span class="nav-number">2.2.3.</span> <span class="nav-text">闪耀光栅</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 Jack&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				UV : <span id="busuanzi_value_site_uv"></span> |  
+				PV : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">-->
+<!--</script>-->
+
+<!--<script type="text/javascript" src="http://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML">-->
+<!--</script>-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Settings</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              Text Font Size
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            You have changed the text font size.
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              Night Mode
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Night mode is enabled. Click again to disable.
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Jack&#39;s Blog
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 Jack All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
