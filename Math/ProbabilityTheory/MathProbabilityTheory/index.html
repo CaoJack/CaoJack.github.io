@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-03-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-17T08:49:25.953Z">
+<meta property="article:modified_time" content="2023-03-20T06:58:01.873Z">
 <meta property="article:author" content="Jack Cao">
 <meta property="article:tag" content="Math">
 <meta property="article:tag" content="ProbabilityTheory">
@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1679043184942),
+    lastupdate: new Date(1679295489909),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2968,6 +2968,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>$$<br>\det(\mathbf{J}) &#x3D;<br>    \begin{vmatrix}<br>        \frac{ \partial x_1 }{ \partial y_1 } &amp; \frac{ \partial x_1 }{ \partial y_2 } \\<br>        \frac{ \partial x_2 }{ \partial y_1 } &amp; \frac{ \partial x_2 }{ \partial y_2 }<br>    \end{vmatrix}<br>    &#x3D;<br>    \begin{vmatrix}<br>        \cos \phi &amp; -a \sin \phi \\<br>        \sin \phi &amp; a \cos \phi<br>    \end{vmatrix}<br>    &#x3D; a<br>$$</p>
 <p>于是有：</p>
 <p>$$<br>\begin{align*}<br>    f_{(A,\Phi)}(a, \phi) &amp;&#x3D; f_{(X,Y)}(x,y) \det(\mathbf{J}) \\<br>    &amp;&#x3D; f_{(X,Y)}(a \cos \phi, a \sin \phi) \det(\mathbf{J}) \\<br>    &amp;&#x3D; \frac{a}{2 \pi \sigma^2} \exp \left[ - \frac{a^2}{2 \sigma^2} \right]<br>\end{align*}<br>$$</p>
+<h2 id="信道模型和参数"><a href="#信道模型和参数" class="headerlink" title="信道模型和参数"></a>信道模型和参数</h2><p>主要内容参考<a target="_blank" rel="noopener" href="http://www.tup.com.cn/upload/books/yz/060024-01.pdf">此链接</a>的教材</p>
+<h3 id="离散输入连续输出信道"><a href="#离散输入连续输出信道" class="headerlink" title="离散输入连续输出信道"></a>离散输入连续输出信道</h3><p>假设信道输入符号选自一个有限的、离散的输入符号集$X \in \{a_1, a_2, \cdots, a_n\}$，而信道输出$Y \in \{b_1, b_2, \cdots, b_m\}$未经量化$(m \rightarrow \infty)$，这时的信道输出可以是实轴上的任意值，即$Y \in \{ -\infty, +\infty \}$，这样的信道模型称为离散时间无记忆信道。该信道的特性由离散输入$X$、连续输出$Y$以及条件概率密度函数$p_{Y}(y|X&#x3D;a_i)$来决定。</p>
+<p>这类信道中最重要的是一种加性高斯白噪声(Additive White Gaussion Noise, AWGN)信道，该类信道的输入和输出满足：</p>
+<p>$$<br>Y &#x3D; X + G<br>$$</p>
+<p>其中，$G$是一个零均值、方差为$\sigma^2$的高斯随机变量。当$X&#x3D;a_i$给定后，$Y$是一个均值为$a_i$，方差为$\sigma^2$的高斯随机变量，即有：</p>
+<p>$$<br>p_{Y}(y|X&#x3D;a_i) &#x3D; \frac{1}{\sqrt{2 \pi} \sigma} \exp \left[ - \frac{(y-a_i)^2}{2 \sigma^2} \right]<br>$$</p>
+<h3 id="一般情况下的加性噪声信道"><a href="#一般情况下的加性噪声信道" class="headerlink" title="一般情况下的加性噪声信道"></a>一般情况下的加性噪声信道</h3><p>考虑$Y &#x3D; X + N$，其中$N$是加性噪声。如果噪声和信道相互独立，则有</p>
+<p>$$<br>p_{X,Y}(x,y) &#x3D; p_{X,N}(x,n) &#x3D; p_{X}(x)p_{N}(n)<br>$$</p>
+<details ><summary> 第一个等号的证明如下 </summary>
+              <div class='content'>
+              <p>考虑如下变换：<br>$$<br>\begin{cases}<br>    x &#x3D; x \\<br>    y &#x3D; x + n<br>\end{cases}<br>$$<br>则 $p_{X,N}(x,n) &#x3D; p_{X,Y}(x,y) \det(\mathbf{J})$，其中<br>$$<br>\det(\mathbf{J}) &#x3D;<br>    \begin{vmatrix}<br>        \frac{ \partial x }{ \partial x } &amp; \frac{ \partial x }{ \partial n } \\<br>        \frac{ \partial y }{ \partial x } &amp; \frac{ \partial y }{ \partial n }<br>    \end{vmatrix}<br>    &#x3D;<br>    \begin{vmatrix}<br>        1 &amp; 0 \\<br>        1 &amp; 1<br>    \end{vmatrix}<br>    &#x3D; 1<br>$$<br>因此$p_{X,N}(x,n) &#x3D; p_{X,Y}(x,y)$。</p>
+              </div>
+            </details>
+
+<p>则<br>$$<br>p_{Y}(y|x) &#x3D; \frac{p_{X,Y}(x,y)}{p_{X}(x)} &#x3D; \frac{p_{X,N}(x,n)}{p_{X}(x)} &#x3D; p_{N}(n)<br>$$</p>
 
   </div>
   
@@ -2992,10 +3007,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-17T16:49:25+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-20T14:58:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 17, 2023</p>
+    <p>更新于：Mar 20, 2023</p>
   </a>
 </div>
 
@@ -3128,7 +3143,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%98%E6%8D%A2"><span class="toc-text">随机变量的函数变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E5%8F%98%E6%8D%A2"><span class="toc-text">一维变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-text">定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%8F%98%E6%8D%A2"><span class="toc-text">二维变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-1"><span class="toc-text">定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-text">示例</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%98%E6%8D%A2"><span class="toc-text">随机变量的函数变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E5%8F%98%E6%8D%A2"><span class="toc-text">一维变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-text">定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%8F%98%E6%8D%A2"><span class="toc-text">二维变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-1"><span class="toc-text">定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-text">示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%8F%82%E6%95%B0"><span class="toc-text">信道模型和参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E8%BE%93%E5%85%A5%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%87%BA%E4%BF%A1%E9%81%93"><span class="toc-text">离散输入连续输出信道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E5%8A%A0%E6%80%A7%E5%99%AA%E5%A3%B0%E4%BF%A1%E9%81%93"><span class="toc-text">一般情况下的加性噪声信道</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3791,7 +3806,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Jack's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Jack's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Math/","name":"Math"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Math/ProbabilityTheory/","name":"ProbabilityTheory"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/","name":"概率论部分知识点备忘录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Jack's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Jack's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概率论部分知识点备忘录","description":"本篇用于记录常用或易忘的概率论相关知识点。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/"},"author":{"@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Jack's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/","wordCount":21,"datePublished":"2023-03-15T16:00:00.000Z","dateModified":"2023-03-17T08:49:25.953Z","articleSection":"Math","keywords":"Math,ProbabilityTheory","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Jack's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Jack's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Math/","name":"Math"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Math/ProbabilityTheory/","name":"ProbabilityTheory"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/","name":"概率论部分知识点备忘录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Jack's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Jack's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"概率论部分知识点备忘录","description":"本篇用于记录常用或易忘的概率论相关知识点。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/"},"author":{"@type":"Person","name":"Jack Cao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Jack's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/Math/ProbabilityTheory/MathProbabilityTheory/","wordCount":21,"datePublished":"2023-03-15T16:00:00.000Z","dateModified":"2023-03-20T06:58:01.873Z","articleSection":"Math","keywords":"Math,ProbabilityTheory","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
